@@ -4,7 +4,7 @@
 #
 Name     : mvn-maven-archiver
 Version  : 2.2
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/2.2/maven-archiver-2.2.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/2.2/maven-archiver-2.2.jar
 Source1  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/2.2/maven-archiver-2.2.pom
