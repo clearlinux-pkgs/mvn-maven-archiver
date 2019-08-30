@@ -4,7 +4,7 @@
 #
 Name     : mvn-maven-archiver
 Version  : 2.2
-Release  : 4
+Release  : 5
 URL      : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/2.2/maven-archiver-2.2.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/2.2/maven-archiver-2.2.jar
 Source1  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/2.2/maven-archiver-2.2.pom
@@ -14,16 +14,16 @@ Source4  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/2.5/ma
 Source5  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom
 Source6  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/2.6/maven-archiver-2.6.jar
 Source7  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/2.6/maven-archiver-2.6.pom
-Source8  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.jar
-Source9  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.pom
-Source10  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/3.2.0/maven-archiver-3.2.0.jar
-Source11  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/3.2.0/maven-archiver-3.2.0.pom
+Source8  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/3.0.2/maven-archiver-3.0.2.jar
+Source9  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/3.0.2/maven-archiver-3.0.2.pom
+Source10  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.jar
+Source11  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.pom
+Source12  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/3.2.0/maven-archiver-3.2.0.jar
+Source13  : https://repo1.maven.org/maven2/org/apache/maven/maven-archiver/3.2.0/maven-archiver-3.2.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: mvn-maven-archiver-data = %{version}-%{release}
-BuildRequires : apache-maven
-BuildRequires : buildreq-mvn
 
 %description
 No detailed description available
@@ -66,17 +66,23 @@ cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/2.6
 cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/2.6/maven-archiver-2.6.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.1.1
-cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.0.2
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.0.2/maven-archiver-3.0.2.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.0.2
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.0.2/maven-archiver-3.0.2.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.1.1
-cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.pom
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.1.1
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.2.0
-cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.2.0/maven-archiver-3.2.0.jar
+cp %{SOURCE12} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.2.0/maven-archiver-3.2.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.2.0
-cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.2.0/maven-archiver-3.2.0.pom
+cp %{SOURCE13} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.2.0/maven-archiver-3.2.0.pom
 
 
 %files
@@ -92,6 +98,8 @@ cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven
 /usr/share/java/.m2/repository/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom
 /usr/share/java/.m2/repository/org/apache/maven/maven-archiver/2.6/maven-archiver-2.6.jar
 /usr/share/java/.m2/repository/org/apache/maven/maven-archiver/2.6/maven-archiver-2.6.pom
+/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.0.2/maven-archiver-3.0.2.jar
+/usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.0.2/maven-archiver-3.0.2.pom
 /usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.jar
 /usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.pom
 /usr/share/java/.m2/repository/org/apache/maven/maven-archiver/3.2.0/maven-archiver-3.2.0.jar
